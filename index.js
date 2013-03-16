@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var emitter = require('emitter');
+var Emitter = require('emitter');
 
 /**
  * Expose `RandomPoller`.

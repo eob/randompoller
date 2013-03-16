@@ -1,26 +1,13 @@
 randompoller
 ============
 
-Playing with the Component framework..
+Playing with the Component framework.. Here's an example component that just fires an event at a randomly chosen interval.
 
-To Run
+To see how to **use** this component, see the project https://github.com/eob/randompoller-user
+
+Note
 ------
 
-First install **Component**
+You'll want to install **Component**
 
     sudo npm install -g component
-
-Then, in your project, install the **Random Poller** component:
-
-    $ component install eob/randompoller
-
-To use it, in your code:
-   
-    var RandomPoller = require('randompoller');
-    var rp = new RandomPoller();
-    rp.on('BANG', function() {
-      alert("Fire!");
-    });
-
-Example, in this directory
---------------------------

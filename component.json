@@ -1,0 +1,11 @@
+{
+  "name": "randompoller",
+  "description": "Fires an event at regular intervals",
+  "keywords": ["example"],
+  "dependencies": {
+    "component/emitter": "*"
+  },
+  "version": "1.0.0",
+  "scripts": ["index.js"]
+}
+

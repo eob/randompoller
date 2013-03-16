@@ -1,0 +1,17 @@
+{
+  "name": "randompoller",
+  "description": "Random Poller",
+  "version": "1.0.0",
+  "dependencies": {
+    "indexof": "0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "component": {
+    "scripts": {
+      "randompoll": "index.js"
+    }
+  }
+}

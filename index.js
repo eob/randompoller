@@ -24,7 +24,8 @@ function RandomPoller() {
   // var rp = new RandomPoller();
   // rp.on('eventName', function() {...})
   for (var key in Emitter.prototype) {
-    this.key = Emitter.prototype.key;
+    console.log("Wiring up Emitter." + key + " to RandomPoller");
+    this[key] = Emitter.prototype[key];
   }
 
   // Now we start emitting random events

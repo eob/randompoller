@@ -24,7 +24,6 @@ function RandomPoller() {
   // var rp = new RandomPoller();
   // rp.on('eventName', function() {...})
   for (var key in Emitter.prototype) {
-    console.log("Wiring up Emitter." + key + " to RandomPoller");
     this[key] = Emitter.prototype[key];
   }
 
@@ -35,7 +34,11 @@ function RandomPoller() {
 
 RandomPoller.prototype.startEmittingRandomEvents = function() {
   var seconds = 5000 * Math.random(); // [0, 5] seconds
-  this.timer_ = setInterval(this.eventTimerFired, seconds);
+  var self = this;
+  var callMeBack = function() {
+    self.eventTimerFired();
+  }
+  this.timer_ = setInterval(callMeBack, seconds);
 };
 
 RandomPoller.prototype.eventTimerFired = function() {

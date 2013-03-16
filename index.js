@@ -34,7 +34,7 @@ function RandomPoller() {
 
 RandomPoller.prototype.startEmittingRandomEvents = function() {
   var seconds = 5000 * Math.random(); // [0, 5] seconds
-  this.timer_ = window.setInterval(this.eventTimerFired, seconds);
+  this.timer_ = setInterval(this.eventTimerFired, seconds);
 };
 
 RandomPoller.prototype.eventTimerFired = function() {
@@ -42,6 +42,6 @@ RandomPoller.prototype.eventTimerFired = function() {
 };
 
 RandomPoller.prototype.stopEmittingRandomEvents = function() {
-  window.clearInterval(this.timer_);
+  clearInterval(this.timer_);
   this.timer_ = null;
 };
